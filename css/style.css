@@ -9,6 +9,53 @@
   padding: 0;
 }
 
+/* UTILITIES */
+.clearfix{
+  content:"";
+  display: table;
+  clear: both;
+}
+
+.float-l{
+  float: left;
+}
+
+/* /UTILITIES */
+
+header, footer{
+  width: 100%;
+  height: 100px;
+  background-color: black;
+  padding: 15px;
+}
+
+.container-sito{
+  width: 100%;
+  margin: 0 auto;
+}
+.main-container{
+  width: 100%;
+  height: calc(100vh - 200px);
+  background-color: black;
+  padding: 0px 15px;
+}
+.colonna-sx, .colonna-cen, .colonna-dx{
+  height: 100%;
+}
+
+.colonna-sx, .colonna-dx{
+  width: 40%;
+  background-color: lightgrey;
+  border-radius: 30px;
+}
+
+.colonna-cen{
+  width: 20%;
+  height: 100%;
+  background-color: black;
+  color: red;
+}
+
 body{
   background-color: white;
 }
@@ -16,7 +63,7 @@ body{
 
 header h1{
   text-align: center;
-  color: rgb(0,108,103);
+  color: white;
   text-shadow: 0px 0px 10px rgba(0,0,0,0.1);
   margin-bottom: 30px;
 }
@@ -24,3 +71,100 @@ header h1{
 h2{
   margin-bottom: 15px;
 }
+
+footer{
+  color: white;
+}
+
+
+/* COLONNA SINISTRA e DESTRA*/
+.colonna-sx .content,
+.colonna-dx .content{
+  height: 100%;
+  padding: 15px;
+}
+.player-1-flex,
+.player-2-flex{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  height: 100%;
+  text-align: center;
+  justify-content: space-between;
+  align-items: center;
+
+
+}
+
+.player-1-flex .box-utente,
+.player-2-flex .box-utente{
+  width: 100%;
+  height: 10%;
+  background-color: blue;
+  color:white;
+  font-size: 32px;
+  border-radius: 5px;
+}
+
+.player-1-flex .box-dado,
+.player-2-flex .box-dado{
+  /* width: 100%; */
+  height: 10%;
+  font-size: 32px;
+  color: white;
+  text-shadow: 0px 0px 4px black;
+
+
+}
+
+.player-1-flex .box-dado .dado,
+.player-2-flex .box-dado .dado{
+  height: 50px;
+  width: 50px;
+  background-color: pink;
+  border: 1px solid black;
+  border-radius: 4px;
+}
+
+.player-1-flex .box-win,
+.player-2-flex .box-win{
+  width: 100%;
+  height: 10%;
+  font-size: 32px;
+  color: green;
+}
+
+.player-1-flex .box-counter,
+.player-2-flex .box-counter{
+  width: 100%;
+  height: 10%;
+  font-size: 32px;
+}
+/* COLONNA SINISTRA */
+
+/* COLONNA CENTRALE */
+.colonna-cen .content{
+  height: 100%;
+  padding: 15px;
+}
+
+.vs-flex {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.vs-flex{
+  border-radius: 15px;
+}
+.round{
+  font-size: 48px;
+ }
+
+.vs {
+  font-size: 64px;
+}
+
+/* /COLONNA CENTRALE */

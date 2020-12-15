@@ -14,9 +14,84 @@
     <div class="container-sito">
 
       <header>
+        <div class="content">
           <h1> Gioco dadi</h1>
+        </div>
+
       </header>
 
+      <main>
+        <div class="main-container clearfix">
+
+          <div class="colonna-sx float-l">
+            <div class="content">
+              <div class="player-1-flex">
+                <div class="box-utente">
+                  <span id="player1Utente">empty</span>
+                </div>
+                <div class="box-dado">
+                  <div class="dado">
+                    <span id="player1Dado">empty</span>
+                  </div>
+
+                </div>
+                <div class="box-win">
+                  <span id="player1Win">empty</span>
+                </div>
+                <div class="box-counter">
+                  <span> Vincite Totali: </span>
+                  <span id="player1Counter">empty </span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="colonna-cen float-l">
+            <div class="content">
+              <div class="vs-flex">
+                <div class="round">
+                  Round:
+                  <span id="round">7</span>
+                </div>
+                <div class="vs">
+                    VS
+                </div>
+
+              </div>
+
+            </div>
+          </div>
+          <div class="colonna-dx float-l">
+            <div class="content">
+              <div class="player-2-flex">
+                <div class="box-utente">
+                  <span id="player2Utente">CPU</span>
+                </div>
+                <div class="box-dado">
+                  <div class="dado">
+                    <span id="player2Dado">empty</span>
+                  </div>
+
+                </div>
+                <div class="box-win">
+                  <span id="player2Win">empty</span>
+                </div>
+                <div class="box-counter">
+                  <span> Vincite Totali: </span>
+                  <span id="player2Counter">empty </span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+      </main>
+
+      <footer>
+        <div class="content">
+          <button type="button" name="btnLancia" onclick=""></button>
+          <span id="msgBox"> empty </span>
+        </div>
+
+      </footer>
 
     <!-- Script javascript -->
     <script type="text/javascript" src="./js/script.js"></script>
