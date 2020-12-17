@@ -19,6 +19,7 @@ if (accessoOk){
 function controllaAccesso(utenteEmail){
   var arrayLista = ['Gianni@gmail.com','Francesco@gmail.com','Pierberto@gmail.com','Mauro@gmail.com','Ernesto@gmail.com', 'debug'];
 
+  // Debug Console
   printLista(arrayLista);
 
   // Cerca mail nella lista
@@ -53,7 +54,7 @@ function giocoDadi(mailUtente){
   // Chiedi quanti lanci vuoi fare
   // var nMatch = prompt('Quanti lanci vuoi fare?');
   // Forza ad 11 per debug
-  nMatch =11;
+  nMatch =1;
   var okInt = false;
   okInt = verificaInt(nMatch);
   if (okInt === true){
@@ -74,9 +75,12 @@ function giocoDadi(mailUtente){
     // Lancia dado utente
     dadoUtente = lanciaDado();
     document.getElementById('player1Dado').innerText = dadoUtente;
+    document.getElementById('player1DadoImg').src = aggiornaDadoImg(dadoUtente);
+
     // Lancia dado cpu
     dadoCpu = lanciaDado();
     document.getElementById('player2Dado').innerText = dadoCpu;
+    document.getElementById('player2DadoImg').src = aggiornaDadoImg(dadoCpu);
 
     // Stabilisci vincitore lancio
     console.log('Utente: ' + dadoUtente);
@@ -89,17 +93,23 @@ function giocoDadi(mailUtente){
     if (dadoUtente > dadoCpu){
       winner = 'Utente';
       document.getElementById('player1Win').innerText = "WINNER";
+      document.getElementById('player1WinImg').src = "./img/winner.png";
       document.getElementById('player2Win').innerText = "";
+      document.getElementById('player2WinImg').src = "";
       nWinUtente++;
     }else if(dadoUtente < dadoCpu){
       winner = 'CPU';
       document.getElementById('player1Win').innerText = "";
+      document.getElementById('player1WinImg').src = "";
       document.getElementById('player2Win').innerText = "WINNER";
+      document.getElementById('player2WinImg').src = "./img/winner.png";
       nWinCpu++;
     }else{
       winner = 'Pareggio!';
       document.getElementById('player1Win').innerText = "PAREGGIO";
+      document.getElementById('player1WinImg').src = "";
       document.getElementById('player2Win').innerText = "PAREGGIO";
+      document.getElementById('player2WinImg').src = "";
     }
 
     console.log(winner);
@@ -167,6 +177,29 @@ function lanciaDado(){
   return dado;
 }
 
+function aggiornaDadoImg(valoreDado){
+  var path;
+  if (valoreDado === 1){
+    path = './img/dado/dado-1.svg';
+  }
+  if (valoreDado === 2){
+    path = './img/dado/dado-2.svg';
+  }
+  if (valoreDado === 3){
+    path = './img/dado/dado-3.svg';
+  }
+  if (valoreDado === 4){
+    path = './img/dado/dado-4.svg';
+  }
+  if (valoreDado === 5){
+    path = './img/dado/dado-5.svg';
+  }
+  if (valoreDado === 6){
+    path = './img/dado/dado-6.svg';
+  }
+
+  return path;
+}
 // Nega variabile
 function toggle(status){
   status = !status;

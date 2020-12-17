@@ -41,19 +41,23 @@ header, footer{
 }
 .colonna-sx, .colonna-cen, .colonna-dx{
   height: 100%;
+  box-shadow: 0px 0px 30px rgba(255,255,255,0.5);
+  border-radius: 30px;
 }
 
 .colonna-sx, .colonna-dx{
   width: 40%;
   background-color: lightgrey;
-  border-radius: 30px;
+
 }
 
 .colonna-cen{
+  position: relative;
   width: 20%;
   height: 100%;
-  background-color: black;
+  background-color: rgba(0,0,0,0.5);
   color: red;
+  z-index: 2;
 }
 
 body{
@@ -99,11 +103,20 @@ footer{
 .player-1-flex .box-utente,
 .player-2-flex .box-utente{
   width: 100%;
-  height: 10%;
-  background-color: blue;
+  height: 20%;
+  background: rgb(34,193,195);
+  background: radial-gradient(circle, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%);
   color:white;
   font-size: 32px;
-  border-radius: 5px;
+  border-radius: 30px;
+  border: 1px solid rgba(0,0,0,0.5);
+  box-shadow: 0px 0px 10px rgba(0,0,0,0.5);
+}
+
+.player-1-flex .box-utente img,
+.player-2-flex .box-utente img{
+  max-width: 100px;
+
 }
 
 .player-1-flex .box-dado,
@@ -119,11 +132,22 @@ footer{
 
 .player-1-flex .box-dado .dado,
 .player-2-flex .box-dado .dado{
-  height: 50px;
-  width: 50px;
-  background-color: pink;
-  border: 1px solid black;
+  width: 200px;
+
+  /* background-color: white;
+  border: 1px solid black; */
   border-radius: 4px;
+}
+
+#player1Dado,
+#player2Dado{
+  display: none;
+}
+
+.player-1-flex .box-dado .dado img,
+.player-2-flex .box-dado .dado img{
+  margin: 15px 0px;
+  max-width: 100px;
 }
 
 .player-1-flex .box-win,
@@ -133,6 +157,14 @@ footer{
   font-size: 32px;
   color: green;
 }
+
+.player-1-flex .box-win #player1WinImg,
+.player-2-flex .box-win #player2WinImg{
+  max-width: 150px;
+
+}
+
+
 
 .player-1-flex .box-counter,
 .player-2-flex .box-counter{

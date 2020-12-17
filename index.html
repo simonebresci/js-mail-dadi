@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="it" dir="ltr">
   <head>
     <meta charset="utf-8">
     <title>Gioco Dadi</title>
@@ -27,16 +27,19 @@
             <div class="content">
               <div class="player-1-flex">
                 <div class="box-utente">
-                  <span id="player1Utente">empty</span>
+                  <img src="./img/user/batman.png" alt="">
+                  <div id="player1Utente">empty</div>
                 </div>
                 <div class="box-dado">
                   <div class="dado">
                     <span id="player1Dado">empty</span>
+                    <img id="player1DadoImg" src="js" alt="">
                   </div>
 
                 </div>
                 <div class="box-win">
                   <span id="player1Win">empty</span>
+                  <img id="player1WinImg" src="./img/winner.png" alt="">
                 </div>
                 <div class="box-counter">
                   <span> Vincite Totali: </span>
@@ -64,16 +67,19 @@
             <div class="content">
               <div class="player-2-flex">
                 <div class="box-utente">
-                  <span id="player2Utente">CPU</span>
+                  <img src="./img/user/pc.png" alt="">
+                  <div id="player2Utente">CPU</div>
                 </div>
                 <div class="box-dado">
                   <div class="dado">
                     <span id="player2Dado">empty</span>
+                    <img id="player2DadoImg" src="js" alt="">
                   </div>
 
                 </div>
                 <div class="box-win">
                   <span id="player2Win">empty</span>
+                  <img id="player2WinImg" src="./img/winner.png" alt="">
                 </div>
                 <div class="box-counter">
                   <span> Vincite Totali: </span>
@@ -87,7 +93,8 @@
 
       <footer>
         <div class="content">
-          <button type="button" name="btnLancia" onclick=""></button>
+          <!-- <button type="button" name="btnLancia" onclick=""></button> -->
+          <div> Premi F5 o aggiorna la pagina per lanciare di nuovo il dado </div>
           <span id="msgBox"> empty </span>
         </div>
 
