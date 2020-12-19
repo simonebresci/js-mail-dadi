@@ -77,6 +77,7 @@ function giocoDadi(mailUtente){
     document.getElementById('player1Dado').innerText = dadoUtente;
     document.getElementById('player1DadoImg').src = aggiornaDadoImg(dadoUtente);
 
+
     // Lancia dado cpu
     dadoCpu = lanciaDado();
     document.getElementById('player2Dado').innerText = dadoCpu;
@@ -92,23 +93,23 @@ function giocoDadi(mailUtente){
     // Confronta dadi
     if (dadoUtente > dadoCpu){
       winner = 'Utente';
-      document.getElementById('player1Win').innerText = "WINNER";
+      document.getElementById('player1Win').innerText = "";
       document.getElementById('player1WinImg').src = "./img/winner.png";
       document.getElementById('player2Win').innerText = "";
-      document.getElementById('player2WinImg').src = "";
+      document.getElementById('player2WinImg').src = "./img/looser.png";
       nWinUtente++;
     }else if(dadoUtente < dadoCpu){
       winner = 'CPU';
       document.getElementById('player1Win').innerText = "";
-      document.getElementById('player1WinImg').src = "";
-      document.getElementById('player2Win').innerText = "WINNER";
+      document.getElementById('player1WinImg').src = "./img/looser.png";
+      document.getElementById('player2Win').innerText = "";
       document.getElementById('player2WinImg').src = "./img/winner.png";
       nWinCpu++;
     }else{
       winner = 'Pareggio!';
-      document.getElementById('player1Win').innerText = "PAREGGIO";
+      document.getElementById('player1Win').innerText = "";
       document.getElementById('player1WinImg').src = "";
-      document.getElementById('player2Win').innerText = "PAREGGIO";
+      document.getElementById('player2Win').innerText = "";
       document.getElementById('player2WinImg').src = "";
     }
 
@@ -116,6 +117,7 @@ function giocoDadi(mailUtente){
 
     console.log('=====================');
     console.log('                     ');
+
 
     }
 
@@ -204,4 +206,8 @@ function aggiornaDadoImg(valoreDado){
 function toggle(status){
   status = !status;
   return status;
+}
+
+function btnNextClick(){
+  giocoDadi(email);
 }
